@@ -35,7 +35,7 @@
 <meta property="og:image" content="http://example.com/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904162425601.png">
 <meta property="og:image" content="http://example.com/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904162715238.png">
 <meta property="article:published_time" content="2022-09-04T07:51:11.000Z">
-<meta property="article:modified_time" content="2023-11-02T06:10:25.151Z">
+<meta property="article:modified_time" content="2023-11-02T06:41:57.325Z">
 <meta property="article:author" content="星期天不下雨">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Next">
@@ -348,7 +348,7 @@ mjx-container[display="true"] + br {
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-11-02 14:10:25" itemprop="dateModified" datetime="2023-11-02T14:10:25+08:00">2023-11-02</time>
+                <time title="修改时间：2023-11-02 14:41:57" itemprop="dateModified" datetime="2023-11-02T14:41:57+08:00">2023-11-02</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -374,22 +374,34 @@ mjx-container[display="true"] + br {
         <p>首先介绍如何使用Hexo+Github来搭建一个属于自己的个人博客，无需额外服务器，无需编写代码手动开发。接着讲解如何使用Next来美化自己的博客。</p>
 <span id="more"></span>
 
-<h2 id="一、前期预安装"><a href="#一、前期预安装" class="headerlink" title="一、前期预安装"></a>一、前期预安装</h2><h3 id="1、Node-js和Npm安装"><a href="#1、Node-js和Npm安装" class="headerlink" title="1、Node.js和Npm安装"></a>1、Node.js和Npm安装</h3><blockquote>
-<p>中文地址  <a target="_blank" rel="noopener" href="http://nodejs.cn/download/">下载 | Node.js 中文网 (nodejs.cn)</a></p>
-<p><code>node -v</code> 	输出v16.16.0</p>
-<p><code>npm -v</code> 	  输出8.16.0</p>
-</blockquote>
-<h3 id="2、Git的安装"><a href="#2、Git的安装" class="headerlink" title="2、Git的安装"></a>2、Git的安装</h3><blockquote>
-<p>下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
-<p><code>git -v</code> 	输出git version 2.37.1.windows.1</p>
-<p>Github账号的注册-&gt;SSH免密连接：<code>ssh-keygen -t rsa -C  github注册时的邮箱地址</code>  以生成ssh密钥。</p>
-<p>复制C盘中用户目录\.ssh\id_rsa.pub文件内容到github主页-&gt;个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</p>
-<p>测试是否可以免密连接 <code>ssh -T git@github.com</code></p>
-</blockquote>
-<h3 id="3、Hexo的安装"><a href="#3、Hexo的安装" class="headerlink" title="3、Hexo的安装"></a>3、Hexo的安装</h3><blockquote>
-<p>安装命令：<code>npm install hexo-cli -g</code></p>
-<p><code>hexo -v</code>  输出hexo-cli: 4.3.0等信息</p>
-</blockquote>
+<h2 id="一、前期预安装"><a href="#一、前期预安装" class="headerlink" title="一、前期预安装"></a>一、前期预安装</h2><h3 id="1、Node-js和Npm安装"><a href="#1、Node-js和Npm安装" class="headerlink" title="1、Node.js和Npm安装"></a>1、Node.js和Npm安装</h3><ul>
+<li><p>中文地址 <a target="_blank" rel="noopener" href="http://nodejs.cn/download/">下载 | Node.js 中文网 (nodejs.cn)</a></p>
+</li>
+<li><p><code>node -v</code> 输出v16.16.0</p>
+</li>
+<li><p><code>npm -v</code> 输出8.16.0</p>
+</li>
+</ul>
+<h3 id="2、Git的安装"><a href="#2、Git的安装" class="headerlink" title="2、Git的安装"></a>2、Git的安装</h3><ul>
+<li><p>下载地址：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+</li>
+<li><p><code>git -v</code> 输出git version 2.37.1.windows.1</p>
+</li>
+<li><p>Github账号的注册-&gt;SSH免密连接：<code>ssh-keygen -t rsa -C  github注册时的邮箱地址</code>  以生成ssh密钥。</p>
+<ul>
+<li><p>复制C盘中用户目录\.ssh\id_rsa.pub文件内容到github主页-&gt;个人设置 -&gt; SSH and GPG keys -&gt; New SSH key</p>
+</li>
+<li><p>测试是否可以免密连接 <code>ssh -T git@github.com</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3、Hexo的安装"><a href="#3、Hexo的安装" class="headerlink" title="3、Hexo的安装"></a>3、Hexo的安装</h3><ul>
+<li><p>安装命令：<code>npm install hexo-cli -g</code></p>
+</li>
+<li><p><code>hexo -v</code>  输出hexo-cli: 4.3.0等信息</p>
+</li>
+</ul>
 <h2 id="二、在本地部署Hexo"><a href="#二、在本地部署Hexo" class="headerlink" title="二、在本地部署Hexo"></a><strong>二、在本地部署Hexo</strong></h2><h3 id="1、hexo-init"><a href="#1、hexo-init" class="headerlink" title="1、hexo init"></a>1、hexo init</h3><ul>
 <li><p>创建一个Blog的本地文件夹(e.g.Blog)，用于存放本地的bolg文件，等待后续deploy到github上</p>
 </li>
@@ -399,15 +411,17 @@ mjx-container[display="true"] + br {
 <p><img src="/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904161554496.png" alt="hexo init运行结果"></p>
 </li>
 </ul>
-<p><img src="/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904161738596.png" alt="本地生成文件"></p>
+<img src="/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904161738596.png" alt="本地生成文件" style="zoom: 67%;">
+
 <h3 id="2、hexo-s"><a href="#2、hexo-s" class="headerlink" title="2、hexo s"></a>2、hexo s</h3><ul>
 <li><code>hexo s -p 5555</code>：-p指定端口号，默认为4000（可选）；s==server；–config指定Hexo主配置文件</li>
 </ul>
 <p><img src="/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904162425601.png" alt="hexo s运行结果"></p>
 <h3 id="3、http-localhost-4000"><a href="#3、http-localhost-4000" class="headerlink" title="3、http://localhost:4000/"></a>3、<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></h3><ul>
-<li>在本地浏览器地址栏中输入	<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a>	即可访问到默认的博客主页</li>
+<li>在本地浏览器地址栏中输入 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 即可访问到默认的博客主页</li>
 </ul>
-<p><img src="/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904162715238.png" alt="博客主页"></p>
+<img src="/2022/09/04/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E4%BB%A5%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/image-20220904162715238.png" alt="博客主页" style="zoom: 67%;">
+
 <h2 id="三、Hexo界面主题–Next"><a href="#三、Hexo界面主题–Next" class="headerlink" title="三、Hexo界面主题–Next"></a>三、<strong>Hexo界面主题–Next</strong></h2><blockquote>
 <p>Next主题：<a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">https://github.com/iissnan/hexo-theme-next</a></p>
 <p>Matery主题：<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">https://github.com/blinkfox/hexo-theme-matery</a></p>
@@ -424,7 +438,8 @@ mjx-container[display="true"] + br {
 <li><p>在hexo的_config.yml文件中修改 <code>theme: 主题名</code></p>
 </li>
 <li><p>修改完成之后使用如下命令： <code>hexo g</code> 重新生成html文件</p>
-<p>如果出现一些莫名其妙的问题，可以先执行<code>hexo clean</code>来清理一下public中的html内容，然后再执行<code>hexo g</code></p>
+</li>
+<li><p>如果出现一些莫名其妙的问题，可以先执行<code>hexo clean</code>来清理一下public中的html内容，然后再执行<code>hexo g</code></p>
 </li>
 </ul>
 <h3 id="2、修改主题"><a href="#2、修改主题" class="headerlink" title="2、修改主题"></a>2、修改主题</h3><blockquote>
@@ -454,32 +469,27 @@ mjx-container[display="true"] + br {
 </li>
 <li><h4 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h4><ul>
 <li><p>安装相关插件：<code>npm install hexo-generator-search --save</code></p>
-<ul>
+</li>
 <li><p>修改Next主题配置文件_config.yml的local_search的enable为true</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # If auto, trigger search by changing input.</span><br><span class="line">  # If manual, trigger search by pressing enter key or search button.</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 3</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure>
-
 </li>
-<li><p>在Hexo配置文件_config.yml中添加：</p>
+<li><p>在 Hexo 配置文件_config.yml 中添加：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 搜索栏</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
 </ul>
 </li>
 <li><h4 id="图片的显示"><a href="#图片的显示" class="headerlink" title="图片的显示"></a>图片的显示</h4><ul>
 <li><p>笔者使用Typora来编写markdown文件，在markdown语法中插入图片使用：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](网络图片链接/绝对路径/相对路径)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>但这种方式使用Hexo渲染之后无法正常显示，hexo官方指定的显示图片语法为：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% asset_img a.png [图片] %}</span><br></pre></td></tr></table></figure>
-
-<p>这种方法在markdown中却不适用，两者冲突。</p>
-</li>
+<li><p>但上述方式使用Hexo渲染之后无法正常显示，hexo官方指定的显示图片语法为：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% asset_img a.png [图片] %}</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>解决方法有以下两种：</p>
+<blockquote>
+<p>这种方法在markdown中却不适用，两者冲突。解决方法有以下两种：</p>
+</blockquote>
 <ul>
 <li><p>安装插件实现用markdown语法显示图片</p>
-<p>参考： <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1702112">https://cloud.tencent.com/developer/article/1702112</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、Hexo的配置</span><br><span class="line">首先配置hexo的_config.yml文件, 将 post_asset_folder 设置为true, 这样每次new 生成一个文章时都会同步生成一个同名的文件夹,然后设置相对或绝对路径。</span><br><span class="line">接着安装插件 asset-image，设置图片为相对路径。npm install https://github.com/CodeFalling/hexo-asset-image</span><br><span class="line">最后hexo clean &amp;&amp; hexo generate &amp;&amp; hexo s 运行查看</span><br><span class="line">2、Typora中的配置</span><br><span class="line">在文件-&gt;偏好设置-&gt;图像-&gt;插入图片时，选择为复制到指定路径，然后设置为./${filename}/；并对本地位置的图片应用上述规则。</span><br><span class="line"></span><br><span class="line">注意：后续在markdown中插入图片时，修改图片路径中的 \ 为 / ,并且不带 .或者./ ，直接写目录/图片</span><br><span class="line">此种方式如有文件夹中存在中文则会url转码,也会显示不正常,解决方法: new 文件时使用英文名,手动设置文章标题即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">参考： https://cloud.tencent.com/developer/article/1702112</span><br><span class="line">1、Hexo的配置</span><br><span class="line">首先配置hexo的_config.yml文件, 将 post_asset_folder 设置为true, 这样每次new 生成一个文章时都会同步生成一个同名的文件夹,然后设置相对或绝对路径。</span><br><span class="line">接着安装插件 asset-image，设置图片为相对路径。npm install https://github.com/CodeFalling/hexo-asset-image</span><br><span class="line">最后hexo clean &amp;&amp; hexo generate &amp;&amp; hexo s 运行查看</span><br><span class="line"></span><br><span class="line">2、Typora中的配置</span><br><span class="line">在文件-&gt;偏好设置-&gt;图像-&gt;插入图片时，选择为复制到指定路径，然后设置为./${filename}/；并对本地位置的图片应用上述规则。</span><br><span class="line"></span><br><span class="line">注意：后续在markdown中插入图片时，修改图片路径中的 \ 为 / ,并且不带 .或者./ ，直接写目录/图片</span><br><span class="line">此种方式如有文件夹中存在中文则会url转码,也会显示不正常,解决方法: new 文件时使用英文名,手动设置文章标题即可</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>搭建阿里云图床+typora配置实现对象存储</p>
 </li>
@@ -494,23 +504,32 @@ mjx-container[display="true"] + br {
 <li><h4 id="留言"><a href="#留言" class="headerlink" title="留言"></a>留言</h4></li>
 <li><h4 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h4></li>
 </ul>
-<h2 id="四、将博客部署到Github上以公网访问"><a href="#四、将博客部署到Github上以公网访问" class="headerlink" title="四、将博客部署到Github上以公网访问"></a>四、<strong>将博客部署到Github上以公网访问</strong></h2><ul>
-<li><h4 id="在Github上新建一个名为xingqitianbuxiayu-github-io的仓库"><a href="#在Github上新建一个名为xingqitianbuxiayu-github-io的仓库" class="headerlink" title="在Github上新建一个名为xingqitianbuxiayu.github.io的仓库"></a>在Github上新建一个名为xingqitianbuxiayu.github.io的仓库</h4><p>xingqitianbuxiayu为唯一的账户名称，xingqitianbuxiayu.github.io唯一，不可换成其他名称</p>
-</li>
-<li><h4 id="修改Hexo的-config-yml文件"><a href="#修改Hexo的-config-yml文件" class="headerlink" title="修改Hexo的_config.yml文件"></a>修改Hexo的_config.yml文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: https://github.com/xingqitianbuxiayu/xingqitianbuxiayu.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><h4 id="运行命令，生成html文件并部署到github上"><a href="#运行命令，生成html文件并部署到github上" class="headerlink" title="运行命令，生成html文件并部署到github上"></a>运行命令，生成html文件并部署到github上</h4><p><code>npm install hexo-deployer-git --save</code> 需先安装，否则hexo d时会报错</p>
-<p><code>hexo clean</code> 来清理一下public的内容</p>
-<p><code>hexo g</code>  将本地的Hexo文件生成为html文件 g=generation –config指定配置文件（可选） </p>
-<p><code>hexo d</code>  将本地文件发布到githubpages     d=deploy</p>
-<p>可能会遇到问题：error: RPC failed; curl 28 OpenSSL SSL_read: Connection was aborted, errno 10053 send-pack: unexpected disconnect while reading sideband packet fatal: the remote end hung up unexpectedly</p>
-<p>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42881768/article/details/114888762">https://blog.csdn.net/weixin_42881768/article/details/114888762</a></p>
-<p>问题2：git提示“warning: LF will be replaced by CRLF”的解决办法</p>
-<p>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u012757419/article/details/105614028">https://blog.csdn.net/u012757419/article/details/105614028</a></p>
-</li>
-<li><h4 id="成功后访问-https-xingqitianbuxiayu-github-io-即可"><a href="#成功后访问-https-xingqitianbuxiayu-github-io-即可" class="headerlink" title="成功后访问 https://xingqitianbuxiayu.github.io/ 即可"></a>成功后访问 <a target="_blank" rel="noopener" href="https://xingqitianbuxiayu.github.io/">https://xingqitianbuxiayu.github.io/</a> 即可</h4></li>
+<h2 id="四、将博客部署到Github上以公网访问"><a href="#四、将博客部署到Github上以公网访问" class="headerlink" title="四、将博客部署到Github上以公网访问"></a>四、<strong>将博客部署到Github上以公网访问</strong></h2><h3 id="1、在Github上新建一个名为xingqitianbuxiayu-github-io的仓库"><a href="#1、在Github上新建一个名为xingqitianbuxiayu-github-io的仓库" class="headerlink" title="1、在Github上新建一个名为xingqitianbuxiayu.github.io的仓库"></a>1、在Github上新建一个名为xingqitianbuxiayu.github.io的仓库</h3><ul>
+<li>xingqitianbuxiayu为唯一的账户名称，xingqitianbuxiayu.github.io唯一，不可换成其他名称</li>
 </ul>
+<h3 id="2、修改Hexo的-config-yml文件"><a href="#2、修改Hexo的-config-yml文件" class="headerlink" title="2、修改Hexo的_config.yml文件"></a>2、修改Hexo的_config.yml文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repository: https://github.com/xingqitianbuxiayu/xingqitianbuxiayu.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 
+<h3 id="3、运行命令，生成html文件并部署到github上"><a href="#3、运行命令，生成html文件并部署到github上" class="headerlink" title="3、运行命令，生成html文件并部署到github上"></a>3、运行命令，生成html文件并部署到github上</h3><ul>
+<li><code>npm install hexo-deployer-git --save</code> 需先安装，否则hexo d时会报错</li>
+<li><code>hexo clean</code> 来清理一下public的内容</li>
+<li><code>hexo g</code>  将本地的Hexo文件生成为html文件 g=generation –config指定配置文件（可选） </li>
+<li><code>hexo d</code>  将本地文件发布到githubpages     d=deploy</li>
+</ul>
+<h3 id="4、可能遇到的问题"><a href="#4、可能遇到的问题" class="headerlink" title="4、可能遇到的问题"></a>4、可能遇到的问题</h3><ul>
+<li><p>问题1：error: RPC failed; curl 28 OpenSSL SSL_read: Connection was aborted, errno 10053 send-pack: unexpected disconnect while reading sideband packet fatal: the remote end hung up unexpectedly</p>
+<ul>
+<li>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42881768/article/details/114888762">https://blog.csdn.net/weixin_42881768/article/details/114888762</a></li>
+<li><code>git config --global http.sslVerify "false"</code>：针对所有远程服务器全局执行，使git忽略ssl证书错误（把忽略证书错误的设置限定在特定的仓库）</li>
+</ul>
+</li>
+<li><p>问题2：git提示“warning: LF will be replaced by CRLF”的解决办法</p>
+<ul>
+<li>解决办法：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u012757419/article/details/105614028">https://blog.csdn.net/u012757419/article/details/105614028</a></li>
+<li><code>git config --global core.autocrlf true</code>：让git提交时自动将windows的回车CR和换行LF转换成LF</li>
+</ul>
+</li>
+</ul>
+<h3 id="5、成功后访问-https-xingqitianbuxiayu-github-io-即可"><a href="#5、成功后访问-https-xingqitianbuxiayu-github-io-即可" class="headerlink" title="5、成功后访问 https://xingqitianbuxiayu.github.io/ 即可"></a>5、成功后访问 <a target="_blank" rel="noopener" href="https://xingqitianbuxiayu.github.io/">https://xingqitianbuxiayu.github.io/</a> 即可</h3>
     </div>
 
     
@@ -609,7 +628,7 @@ mjx-container[display="true"] + br {
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E6%9C%9F%E9%A2%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、前期预安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81Node-js%E5%92%8CNpm%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">1、Node.js和Npm安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81Git%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">2、Git的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81Hexo%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.3.</span> <span class="nav-text">3、Hexo的安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%A8%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2Hexo"><span class="nav-number">2.</span> <span class="nav-text">二、在本地部署Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81hexo-init"><span class="nav-number">2.1.</span> <span class="nav-text">1、hexo init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81hexo-s"><span class="nav-number">2.2.</span> <span class="nav-text">2、hexo s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81http-localhost-4000"><span class="nav-number">2.3.</span> <span class="nav-text">3、http:&#x2F;&#x2F;localhost:4000&#x2F;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Hexo%E7%95%8C%E9%9D%A2%E4%B8%BB%E9%A2%98%E2%80%93Next"><span class="nav-number">3.</span> <span class="nav-text">三、Hexo界面主题–Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E8%AE%BE%E5%AE%9A%E4%B8%BB%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">1、设定主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">3.2.</span> <span class="nav-text">2、修改主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.2.1.</span> <span class="nav-text">添加新的页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">3.2.2.</span> <span class="nav-text">添加新的文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">3.2.3.</span> <span class="nav-text">搜索功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E7%9A%84%E6%98%BE%E7%A4%BA"><span class="nav-number">3.2.4.</span> <span class="nav-text">图片的显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9A%84%E5%AE%9E%E6%97%B6%E6%97%B6%E9%97%B4"><span class="nav-number">3.2.5.</span> <span class="nav-text">侧边栏的实时时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%95%99%E8%A8%80"><span class="nav-number">3.2.6.</span> <span class="nav-text">留言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="nav-number">3.2.7.</span> <span class="nav-text">数学公式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E4%BB%A5%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE"><span class="nav-number">4.</span> <span class="nav-text">四、将博客部署到Github上以公网访问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8Github%E4%B8%8A%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%90%8D%E4%B8%BAxingqitianbuxiayu-github-io%E7%9A%84%E4%BB%93%E5%BA%93"><span class="nav-number">4.0.1.</span> <span class="nav-text">在Github上新建一个名为xingqitianbuxiayu.github.io的仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9Hexo%E7%9A%84-config-yml%E6%96%87%E4%BB%B6"><span class="nav-number">4.0.2.</span> <span class="nav-text">修改Hexo的_config.yml文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%8C%E7%94%9F%E6%88%90html%E6%96%87%E4%BB%B6%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A"><span class="nav-number">4.0.3.</span> <span class="nav-text">运行命令，生成html文件并部署到github上</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%90%E5%8A%9F%E5%90%8E%E8%AE%BF%E9%97%AE-https-xingqitianbuxiayu-github-io-%E5%8D%B3%E5%8F%AF"><span class="nav-number">4.0.4.</span> <span class="nav-text">成功后访问 https:&#x2F;&#x2F;xingqitianbuxiayu.github.io&#x2F; 即可</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E6%9C%9F%E9%A2%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">一、前期预安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81Node-js%E5%92%8CNpm%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.</span> <span class="nav-text">1、Node.js和Npm安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81Git%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">2、Git的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81Hexo%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.3.</span> <span class="nav-text">3、Hexo的安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9C%A8%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2Hexo"><span class="nav-number">2.</span> <span class="nav-text">二、在本地部署Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81hexo-init"><span class="nav-number">2.1.</span> <span class="nav-text">1、hexo init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81hexo-s"><span class="nav-number">2.2.</span> <span class="nav-text">2、hexo s</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81http-localhost-4000"><span class="nav-number">2.3.</span> <span class="nav-text">3、http:&#x2F;&#x2F;localhost:4000&#x2F;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81Hexo%E7%95%8C%E9%9D%A2%E4%B8%BB%E9%A2%98%E2%80%93Next"><span class="nav-number">3.</span> <span class="nav-text">三、Hexo界面主题–Next</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E8%AE%BE%E5%AE%9A%E4%B8%BB%E9%A2%98"><span class="nav-number">3.1.</span> <span class="nav-text">1、设定主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98"><span class="nav-number">3.2.</span> <span class="nav-text">2、修改主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E9%A1%B5%E9%9D%A2"><span class="nav-number">3.2.1.</span> <span class="nav-text">添加新的页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">3.2.2.</span> <span class="nav-text">添加新的文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="nav-number">3.2.3.</span> <span class="nav-text">搜索功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9B%BE%E7%89%87%E7%9A%84%E6%98%BE%E7%A4%BA"><span class="nav-number">3.2.4.</span> <span class="nav-text">图片的显示</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%9A%84%E5%AE%9E%E6%97%B6%E6%97%B6%E9%97%B4"><span class="nav-number">3.2.5.</span> <span class="nav-text">侧边栏的实时时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%95%99%E8%A8%80"><span class="nav-number">3.2.6.</span> <span class="nav-text">留言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F"><span class="nav-number">3.2.7.</span> <span class="nav-text">数学公式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0Github%E4%B8%8A%E4%BB%A5%E5%85%AC%E7%BD%91%E8%AE%BF%E9%97%AE"><span class="nav-number">4.</span> <span class="nav-text">四、将博客部署到Github上以公网访问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%9C%A8Github%E4%B8%8A%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%90%8D%E4%B8%BAxingqitianbuxiayu-github-io%E7%9A%84%E4%BB%93%E5%BA%93"><span class="nav-number">4.1.</span> <span class="nav-text">1、在Github上新建一个名为xingqitianbuxiayu.github.io的仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%BF%AE%E6%94%B9Hexo%E7%9A%84-config-yml%E6%96%87%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">2、修改Hexo的_config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E8%BF%90%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%8C%E7%94%9F%E6%88%90html%E6%96%87%E4%BB%B6%E5%B9%B6%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A"><span class="nav-number">4.3.</span> <span class="nav-text">3、运行命令，生成html文件并部署到github上</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%8F%AF%E8%83%BD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">4、可能遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E6%88%90%E5%8A%9F%E5%90%8E%E8%AE%BF%E9%97%AE-https-xingqitianbuxiayu-github-io-%E5%8D%B3%E5%8F%AF"><span class="nav-number">4.5.</span> <span class="nav-text">5、成功后访问 https:&#x2F;&#x2F;xingqitianbuxiayu.github.io&#x2F; 即可</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
